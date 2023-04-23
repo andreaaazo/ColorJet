@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:700,400");
+@import "/src/style/global/colors.scss";
+// Base Text Style
+@mixin baseTextStyle {
+    font-family: "Poppins";
+    color: $text-black-primary;
+    line-height: 1.5;
+}
+
+h1 {
+    @include baseTextStyle();
+    font-size: 5.653rem;
+    font-weight: 700;
+}
+
+h2 {
+    @include baseTextStyle();
+    font-size: 3.998rem;
+    font-weight: 700;
+}
+
+h3 {
+    @include baseTextStyle();
+    font-size: 2.827rem;
+    font-weight: 700;
+}
+
+h4 {
+    @include baseTextStyle();
+    font-size: 1.999rem;
+    font-weight: 700;
+}
+
+h5 {
+    @include baseTextStyle();
+    font-size: 1.414rem;
+    font-weight: 700;
+}
+
+p {
+    @include baseTextStyle();
+    font-weight: 400;
+}

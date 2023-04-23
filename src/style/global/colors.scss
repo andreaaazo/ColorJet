@@ -1,0 +1,59 @@
+/*
+* Primary 
+* Applied frequently to highlight actions & information.
+*/
+
+$primary: #7209b7;
+$primary-background: hsl(hue($primary), 100%, 97%);
+$primary-hover: darken($primary, 5);
+$primary-active: darken($primary, 10);
+@function primary-gradient($deg) {
+    @return linear-gradient(
+        $deg,
+        rgba($primary, 0.1) 0%,
+        rgba($primary, 0.01) 100%
+    );
+}
+
+/* 
+* Text + Icons
+* Applied frequently for text and icons.
+*/
+
+$text-black-primary: hsl(hue($primary), 27%, 8%);
+$text-white-primary: #ffffff;
+$text-black-secondary: rgba($text-black-primary, 0.8);
+$text-white-secondary: rgba($text-white-primary, 0.75);
+$text-black-disabled: rgba($text-black-primary, 0.65);
+$text-white-disabled: rgba($text-white-primary, 0.6);
+
+/*
+* Secondary
+* Applied sparingly to highlight information.
+*/
+
+$secondary: adjust-hue($primary, -16deg);
+$secondary-hover: darken($secondary, 5);
+$secondary-active: darken($secondary, 10);
+$secondary-background: hsl(hue($secondary), 100%, 97%);
+@function secondary-gradient($deg) {
+    @return linear-gradient(
+        $deg,
+        rgba($secondary, 0.1) 0%,
+        rgba($secondary, 0.01) 100%
+    );
+}
+
+/*
+* Neutral
+* Applied frequently for backgrounds, surfaces, dividers, and outlines.
+*/
+
+$black-background-base: hsl(hue($primary), 33%, 6%);
+$black-background-primary: hsl(hue($primary), 18%, 13%);
+$black-background-secondary: hsl(hue($primary), 15%, 16%);
+$line: hsl(hue($primary), 10%, 27%);
+$line-white: hsl(hue($primary), 30%, 91%);
+$white-background-secondary: hsl(hue($primary) + 5deg, 40%, 96%);
+$white-background-base: hsl(hue($primary) + 5deg, 40%, 98%);
+$white-background-primary: #ffffff;
