@@ -1,43 +1,66 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:700,400");
-@import "/src/style/global/colors.scss";
-// Base Text Style
-@mixin baseTextStyle {
-    font-family: "Poppins";
-    color: $text-black-primary;
-    line-height: 1.5;
-}
-
 h1 {
-    @include baseTextStyle();
-    font-size: 5.653rem;
-    font-weight: 700;
+    @include baseTextStyle(700, 5.653rem);
 }
 
 h2 {
-    @include baseTextStyle();
-    font-size: 3.998rem;
-    font-weight: 700;
+    @include baseTextStyle(700, 3.998rem);
 }
 
 h3 {
-    @include baseTextStyle();
-    font-size: 2.827rem;
-    font-weight: 700;
+    @include baseTextStyle(700, 2.827rem);
 }
 
 h4 {
-    @include baseTextStyle();
-    font-size: 1.999rem;
-    font-weight: 700;
+    @include baseTextStyle(700, 1.999rem);
 }
 
 h5 {
-    @include baseTextStyle();
-    font-size: 1.414rem;
-    font-weight: 700;
+    @include baseTextStyle(700, 1.414rem);
 }
 
 p {
-    @include baseTextStyle();
-    font-weight: 400;
+    @include baseTextStyle(400, 1rem);
+}
+
+@media screen and (max-width: 768px) and (min-width: 425px) {
+    h1 {
+        font-size: 3.998rem;
+    }
+    h2 {
+        font-size: 2.827rem;
+    }
+    h3 {
+        font-size: 1.999rem;
+    }
+    h4 {
+        font-size: 1.414rem;
+    }
+    h5 {
+        font-size: 1rem;
+    }
+    p {
+        font-size: 0.707rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    h1 {
+        font-size: 2.827rem;
+    }
+    h2 {
+        font-size: 1.999rem;
+    }
+    h3 {
+        font-size: 1.414rem;
+    }
+    h4 {
+        font-size: 1rem;
+    }
+    h5 {
+        font-size: 0.707rem;
+    }
+    p {
+        font-size: 0.707rem;
+    }
 }

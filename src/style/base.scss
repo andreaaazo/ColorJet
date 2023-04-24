@@ -1,6 +1,18 @@
+// Variables
+@import "/src/style/global/variables.scss";
+// Mixins
+@import "/src/style/global/mixins.scss";
 // Webkit reset
 @import "/src/style/global/reset.scss";
 // Colors
 @import "/src/style/global/colors.scss";
 // Typography
 @import "/src/style/global/typography.scss";
+// Grid
+@import "/src/style/global/grid.scss";
+// Header
+@import "/src/style/components/header.scss";
+// Color
+@import "/src/style/components/color.scss";
+// Colors
+@import "/src/style/components/colors.scss";

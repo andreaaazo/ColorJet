@@ -1,0 +1,5 @@
+.color {
+    @include grid-item(2, 1, 1, 8px, 8px);
+    background-color: aqua;
+    height: 100%;
+}

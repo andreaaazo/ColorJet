@@ -1,0 +1,5 @@
+.colors {
+    @include container-fluid;
+    @include flex-grid(8px, 8px);
+    height: 100vh;
+}

@@ -1,0 +1,102 @@
+/*
+Base Container
+
+Container for content.
+*/
+
+@mixin container {
+    max-width: 1452px;
+    margin: auto;
+    padding-left: 54px;
+    padding-right: 54px;
+    @media screen and (max-width: 768px) and (min-width: 425px) {
+        padding-left: 36px;
+        padding-right: 36px;
+    }
+    @media screen and (max-width: 425px) {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+/*
+Fluid container
+
+Container that takes up 100% of the width in screens up to 1452px, but with the same padding.
+*/
+
+@mixin container-fluid {
+    padding-left: 54px;
+    padding-right: 54px;
+    @media screen and (max-width: 768px) and (min-width: 425px) {
+        padding-left: 36px;
+        padding-right: 36px;
+    }
+    @media screen and (max-width: 425px) {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+/*
+Base Text
+
+A styling base for the text around the page.
+*/
+
+@mixin baseTextStyle($font-weight, $font-size) {
+    font-family: "Poppins";
+    color: $text-black-primary;
+    line-height: 1.5;
+    font-weight: $font-weight;
+    font-size: $font-size;
+}
+
+/*
+Grid Item
+
+Item of the grid. You can change the default gap for better visuality.
+
+WARNING: if you change the gap, you need to change it in the main grid with the same values!
+*/
+
+@mixin grid-item(
+    $col-4k,
+    $col-tablet,
+    $col-iphone,
+    $gap: 24px,
+    $gap-iphone: 16px
+) {
+    display: flex;
+    flex-basis: calc((100% - ((12 / $col-4k - 1) * $gap)) * ($col-4k / 12));
+    @media screen and (max-width: 768px) and (min-width: 425px) {
+        flex-basis: calc(
+            (100% - ((6 / $col-tablet - 1) * $gap)) * ($col-tablet / 6)
+        );
+    }
+    @media screen and (max-width: 425px) {
+        flex-basis: calc(
+            (100% - ((4 / $col-iphone - 1) * $gap-iphone)) * ($col-iphone / 4)
+        );
+    }
+}
+
+/*
+Flex Grid
+
+Grid for elements. You can change the default gap for better visuality.
+
+WARNING: if you change the gap, you need to change it in the grid items with the same values!
+*/
+
+@mixin flex-grid($gap: 24px, $gap-iphone: 16px) {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: $gap;
+    width: auto;
+    margin: auto;
+    @media screen and (max-width: 425px) {
+        gap: $gap-iphone;
+    }
+}
