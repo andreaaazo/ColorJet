@@ -53,14 +53,14 @@ A styling base for the text around the page.
 }
 
 /*
-Grid Item
+Custom Grid Item
 
 Item of the grid. You can change the default gap for better visuality.
 
 WARNING: if you change the gap, you need to change it in the main grid with the same values!
 */
 
-@mixin grid-item(
+@mixin custom-grid-item(
     $col-4k,
     $col-tablet,
     $col-iphone,
@@ -82,14 +82,14 @@ WARNING: if you change the gap, you need to change it in the main grid with the 
 }
 
 /*
-Flex Grid
+Cusotm Flex Grid
 
 Grid for elements. You can change the default gap for better visuality.
 
 WARNING: if you change the gap, you need to change it in the grid items with the same values!
 */
 
-@mixin flex-grid($gap: 24px, $gap-iphone: 16px) {
+@mixin custom-flex-grid($gap: 24px, $gap-iphone: 16px) {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
