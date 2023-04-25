@@ -100,3 +100,13 @@ WARNING: if you change the gap, you need to change it in the grid items with the
         gap: $gap-iphone;
     }
 }
+
+/*
+Base Animation
+
+A basic animation to use around the website.
+*/
+
+@mixin baseAnimation {
+    animation: cubic-bezier(0.25, 0.1, 0.25, 1) 400ms;
+}
