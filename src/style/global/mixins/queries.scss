@@ -1,0 +1,35 @@
+/*
+Tablet Query
+
+For screens from 768px to 425px
+*/
+
+@mixin tablet {
+    @media screen and (max-width: 768px) and (min-width: 425px) {
+        @content;
+    }
+}
+
+/*
+Mobile Query
+
+For screens from 425px to 0px
+*/
+
+@mixin mobile {
+    @media screen and (max-width: 425px) {
+        @content;
+    }
+}
+
+/*
+Tablet and Mobile Query
+
+For screens from 768px to 0px
+*/
+
+@mixin tablet-mobile {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}

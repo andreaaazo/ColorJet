@@ -1,11 +1,23 @@
 /*
 Global
+|- Mixins
 */
 
-// Variables
+// Queries
+@import "/src/style/global/mixins/queries.scss";
+// General Mixins
+@import "/src/style/global/mixins/general.scss";
+// Containers
+@import "/src/style/global/mixins/containers.scss";
+// Elevation
+@import "/src/style/global/mixins/elevation.scss";
+// Section
+@import "/src/style/global/mixins/sections.scss";
+
+/*
+Global
+*/ // Variables
 @import "/src/style/global/variables.scss";
-// Mixins
-@import "/src/style/global/mixins.scss";
 // Webkit reset
 @import "/src/style/global/reset.scss";
 // Colors
@@ -21,6 +33,10 @@ UI Components
 @import "/src/style/components/grid.scss";
 // Container
 @import "/src/style/components/containers.scss";
+// Buttons
+@import "/src/style/components/buttons.scss";
+// Sections
+@import "/src/style/components/sections.scss";
 
 /*
 React Components
@@ -32,3 +48,7 @@ React Components
 @import "/src/style/react/color.scss";
 // Colors
 @import "/src/style/react/colors.scss";
+// Mobile Refresher Button
+@import "/src/style/react/mobile-refresher-button.scss";
+// Filter
+@import "/src/style/react/filter.scss";

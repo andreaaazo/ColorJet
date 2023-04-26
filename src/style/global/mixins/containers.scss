@@ -4,17 +4,17 @@ Base Container
 Container for content.
 */
 
-.container {
+@mixin container {
     max-width: 1452px;
-    margin: auto;
     width: 100%;
+    margin: auto;
     padding-left: 54px;
     padding-right: 54px;
-    @media screen and (max-width: 768px) and (min-width: 425px) {
+    @include tablet {
         padding-left: 36px;
         padding-right: 36px;
     }
-    @media screen and (max-width: 425px) {
+    @include mobile {
         padding-left: 16px;
         padding-right: 16px;
     }
@@ -26,14 +26,14 @@ Fluid container
 Container that takes up 100% of the width in screens up to 1452px, but with the same padding.
 */
 
-.container-fluid {
+@mixin container-fluid {
     padding-left: 54px;
     padding-right: 54px;
-    @media screen and (max-width: 768px) and (min-width: 425px) {
+    @include tablet {
         padding-left: 36px;
         padding-right: 36px;
     }
-    @media screen and (max-width: 425px) {
+    @include mobile {
         padding-left: 16px;
         padding-right: 16px;
     }

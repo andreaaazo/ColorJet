@@ -48,11 +48,11 @@ $secondary-background: hsl(hue($secondary), 100%, 97%);
 * Applied frequently for backgrounds, surfaces, dividers, and outlines.
 */
 
-$black-background-base: hsl(hue($primary), 33%, 6%);
-$black-background-primary: hsl(hue($primary), 18%, 13%);
-$black-background-secondary: hsl(hue($primary), 15%, 16%);
+$background-black-base: hsl(hue($primary), 33%, 6%);
+$background-black-primary: hsl(hue($primary), 18%, 13%);
+$background-black-secondary: hsl(hue($primary), 15%, 16%);
 $line: hsl(hue($primary), 10%, 27%);
 $line-white: hsl(hue($primary), 30%, 91%);
-$white-background-secondary: hsl(hue($primary) + 5deg, 40%, 96%);
-$white-background-base: hsl(hue($primary) + 5deg, 40%, 98%);
-$white-background-primary: #ffffff;
+$background-white-secondary: hsl(hue($primary) + 5deg, 40%, 96%);
+$background-white-base: hsl(hue($primary) + 5deg, 40%, 98%);
+$background-white-primary: #ffffff;

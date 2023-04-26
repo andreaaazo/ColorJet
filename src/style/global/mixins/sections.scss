@@ -1,0 +1,16 @@
+/*
+Section to separate different sections
+*/
+
+@mixin section {
+    padding-bottom: $section-padding;
+}
+
+/*
+First section
+*/
+
+@mixin section-first {
+    padding-top: $section-padding;
+    padding-bottom: $section-padding;
+}

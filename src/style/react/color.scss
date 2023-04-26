@@ -1,5 +1,34 @@
 .color {
-    @include custom-grid-item(2, 2, 1, 8px, 8px);
-    background-color: aqua;
-    height: 100%;
+    @include custom-grid-item(3, 3, 4, 12px, 8px);
+    @include basic-animation;
+    border-radius: 16px;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+        @include basic-animation;
+        @include elevation-1;
+        transform: scaleX(1.015);
+    }
+    h4 {
+        @include basic-animation;
+        padding: $padding-2 $padding-3 $padding-2 $padding-3;
+        border-radius: $padding-2;
+        cursor: pointer;
+    }
+}
+
+.black {
+    color: $text-black-primary;
+    &:hover {
+        @include basic-animation;
+        background: rgba($background-white-primary, 0.2);
+    }
+}
+
+.white {
+    color: $text-white-primary;
+    &:hover {
+        @include basic-animation;
+        background: rgba($background-black-primary, 0.2);
+    }
 }

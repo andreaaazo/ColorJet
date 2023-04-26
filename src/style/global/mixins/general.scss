@@ -1,44 +1,4 @@
 /*
-Base Container
-
-Container for content.
-*/
-
-@mixin container {
-    max-width: 1452px;
-    margin: auto;
-    padding-left: 54px;
-    padding-right: 54px;
-    @media screen and (max-width: 768px) and (min-width: 425px) {
-        padding-left: 36px;
-        padding-right: 36px;
-    }
-    @media screen and (max-width: 425px) {
-        padding-left: 16px;
-        padding-right: 16px;
-    }
-}
-
-/*
-Fluid container
-
-Container that takes up 100% of the width in screens up to 1452px, but with the same padding.
-*/
-
-@mixin container-fluid {
-    padding-left: 54px;
-    padding-right: 54px;
-    @media screen and (max-width: 768px) and (min-width: 425px) {
-        padding-left: 36px;
-        padding-right: 36px;
-    }
-    @media screen and (max-width: 425px) {
-        padding-left: 16px;
-        padding-right: 16px;
-    }
-}
-
-/*
 Base Text
 
 A styling base for the text around the page.
@@ -69,12 +29,12 @@ WARNING: if you change the gap, you need to change it in the main grid with the 
 ) {
     display: flex;
     flex-basis: calc((100% - ((12 / $col-4k - 1) * $gap)) * ($col-4k / 12));
-    @media screen and (max-width: 768px) and (min-width: 425px) {
+    @include tablet {
         flex-basis: calc(
             (100% - ((6 / $col-tablet - 1) * $gap)) * ($col-tablet / 6)
         );
     }
-    @media screen and (max-width: 425px) {
+    @include mobile {
         flex-basis: calc(
             (100% - ((4 / $col-iphone - 1) * $gap-iphone)) * ($col-iphone / 4)
         );
@@ -94,9 +54,18 @@ WARNING: if you change the gap, you need to change it in the grid items with the
     flex-wrap: wrap;
     list-style: none;
     gap: $gap;
-    width: auto;
-    margin: auto;
-    @media screen and (max-width: 425px) {
+    width: 100%;
+    @include mobile {
         gap: $gap-iphone;
     }
+}
+
+/*
+Basic Animation
+
+A basic animation to add it in hover effects
+*/
+
+@mixin basic-animation {
+    transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1) 0s;
 }

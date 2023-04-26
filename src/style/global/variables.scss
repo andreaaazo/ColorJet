@@ -1,10 +1,20 @@
 // Padding
-$padding-xs: 4px;
-$padding-sm: 8px;
-$padding-md: 12px;
-$padding-lg: 16px;
-$padding-xl: 20px;
-$padding-xxl: 24px;
-$padding-3xl: 28px;
+$padding-1: 4px;
+$padding-2: 8px;
+$padding-3: 12px;
+$padding-4: 16px;
+$padding-5: 20px;
+$padding-6: 24px;
+$padding-7: 28px;
+$padding-8: 32px;
+$padding-9: 36px;
+$padding-10: 40px;
+$padding-11: 44px;
+$padding-12: 48px;
+$padding-13: 52px;
+$padding-14: 56px;
+$padding-15: 60px;
 // Theme color
 $primary: #7209b7;
+// Sections padding
+$section-padding: $padding-15;

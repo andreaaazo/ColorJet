@@ -1,0 +1,11 @@
+.mobile-refresher-button {
+    @include elevation-4;
+    display: none;
+    position: fixed;
+    bottom: $padding-3;
+    right: $padding-3;
+    padding: $padding-5;
+    @include tablet-mobile {
+        display: flex;
+    }
+}
