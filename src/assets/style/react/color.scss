@@ -11,9 +11,16 @@
     }
     h4 {
         @include basic-animation;
+        position: relative;
         padding: $padding-2 $padding-3 $padding-2 $padding-3;
         border-radius: $padding-2;
         cursor: pointer;
+        &:hover {
+            .tooltip {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
     }
 }
 

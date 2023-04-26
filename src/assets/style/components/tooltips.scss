@@ -1,0 +1,45 @@
+.tooltip {
+    @include elevation-2;
+    $background: rgba($background-white-secondary, 1);
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    visibility: hidden;
+    gap: $gap-icon-text;
+    padding: $padding-3;
+    background-color: $background;
+    border-radius: $border-radius;
+    color: $text-black-secondary;
+    width: max-content;
+    top: 100%;
+    right: 50%;
+    transform: translateX(50%) translateY($padding-2);
+    opacity: 0;
+    align-items: center;
+    justify-content: center;
+    @include basic-animation;
+    &::after {
+        content: "";
+        position: absolute;
+        top: -16px;
+        right: 50%;
+        transform: translateX(50%);
+        border-width: 8px;
+        border-style: solid;
+        border-color: transparent transparent $background transparent;
+    }
+    .tooltip-icon {
+        font-variation-settings: "FILL" 0;
+        color: $text-black-secondary;
+        font-size: 24px;
+    }
+    p {
+        color: $text-black-secondary;
+    }
+    &.copied {
+        .tooltip-icon {
+            @include basic-animation;
+            font-variation-settings: "FILL" 1;
+        }
+    }
+}

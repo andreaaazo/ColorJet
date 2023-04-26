@@ -22,16 +22,16 @@ export function generateRGB() {
  * 
  */
 export function randomChangeRGBBrightness(rgb) {
-    let randomBrightness = Math.floor((Math.random() * 100) / 100)
+    let randomBrightness = (Math.random() * 100) / 100
 
-    return [rgb[0] * randomBrightness, rgb[1] * randomBrightness, rgb[2] * randomBrightness]
+    return [Math.round(rgb[0] * randomBrightness), Math.round(rgb[1] * randomBrightness), Math.round(rgb[2] * randomBrightness)]
 }
 
 
 /**
  * Returns every shade of Red, Green or Blue
  * 
- * @param {string} baseColor - Allowed red, green or blue
+ * @param {string} baseColor - Allowed red, green, blue or all
  * 
  * @returns {Array} [r, g, b] - Shaded color
  *  
@@ -44,10 +44,11 @@ export function generateShades(baseColor) {
             return randomChangeRGBBrightness([Math.floor(Math.random() * 255), 255, Math.floor(Math.random() * 255)])
         case 'blue':
             return randomChangeRGBBrightness([Math.floor(Math.random() * 255), Math.floor(Math.random() * 255), 255])
+        case 'all':
+            return generateRGB()
         default:
             Error("You have to select 'red', 'green' or 'blue'")
     }
-
 }
 
 /**

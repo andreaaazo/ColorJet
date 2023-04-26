@@ -1,10 +1,10 @@
-import { generateRGB } from "../utils/colors_func";
+import { generateShades } from "../utils/colors_func";
 
-const MobileRefreshButton = ({ setColors }) => {
+const MobileRefreshButton = ({setColors, filter}) => {
 
   const handleClick = () => {
-    setColors([generateRGB(), generateRGB(), generateRGB(), generateRGB()]);
-  };
+    setColors([generateShades(filter), generateShades(filter), generateShades(filter), generateShades(filter)])
+  }
 
   return (
     <div className="icon-button-rounded-lg mobile-refresher-button" onClick={handleClick}>

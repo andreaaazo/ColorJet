@@ -18,3 +18,8 @@ $padding-15: 60px;
 $primary: #7209b7;
 // Sections padding
 $section-padding: $padding-15;
+// Border Radius
+$border-radius: $padding-4;
+$border-radius-sm: calc($border-radius - 4px);
+// Icon-text gap
+$gap-icon-text: $padding-2;

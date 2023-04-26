@@ -69,3 +69,13 @@ A basic animation to add it in hover effects
 @mixin basic-animation {
     transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1) 0s;
 }
+
+/*
+Opacity Animation
+
+An animation to apply when opacity changes
+*/
+
+@mixin animation-opacity {
+    transition: opacity 3s;
+}

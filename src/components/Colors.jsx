@@ -13,30 +13,26 @@ const Colors = () => {
   ]);
   const [filter, setFilter] = useState("all")
 
-    useEffect(() => {
-    const handleSpacePress = (event) => {
-      if (event.key === " ") {
-        event.preventDefault();
-        filter == "all" ? setColors([
-            generateRGB(),
-            generateRGB(),
-            generateRGB(),
-            generateRGB(),
-        ]) : setColors([generateShades(filter), generateShades(filter), generateShades(filter), generateShades(filter)])
+  const handleColorChange = (event) => {
+    if (event.key === " ") {
+      event.preventDefault();
+      setColors([generateShades(filter), generateShades(filter), generateShades(filter), generateShades(filter)])
+    }
+  };
 
-      }
-    };
-    document.body.addEventListener("keydown", handleSpacePress);
+  useEffect(() => {
+    document.body.addEventListener("keydown", handleColorChange);
     return () => {
-      document.body.removeEventListener("keydown", handleSpacePress);
+      document.body.removeEventListener("keydown", handleColorChange);
     };
-  }, []);
+  }, [filter, colors]);
 
   return (
     <>
       <MobileRefreshButton
         className="mobile-refresher-button icon-button-rounded-lg"
         setColors={setColors}
+        filter={filter}
       />
       <Filter setFilter={setFilter}/>
       <div className="colors container-fluid">
