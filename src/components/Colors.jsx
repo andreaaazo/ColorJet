@@ -13,14 +13,13 @@ const Colors = () => {
   ]);
   const [filter, setFilter] = useState("all")
 
-  const handleColorChange = (event) => {
-    if (event.key === " ") {
-      event.preventDefault();
-      setColors([generateShades(filter), generateShades(filter), generateShades(filter), generateShades(filter)])
-    }
-  };
-
   useEffect(() => {
+    const handleColorChange = (event) => {
+      if (event.key === " ") {
+        event.preventDefault();
+        setColors([generateShades(filter), generateShades(filter), generateShades(filter), generateShades(filter)])
+      }
+    };
     document.body.addEventListener("keydown", handleColorChange);
     return () => {
       document.body.removeEventListener("keydown", handleColorChange);
