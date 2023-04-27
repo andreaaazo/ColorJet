@@ -13,13 +13,14 @@ const Color = ({ rgbColor }) => {
     useEffect(() => {
         // Get the HSL value for text-black-primary and convert it to RGB
         const hslTextBlack = getComputedStyle(document.documentElement).getPropertyValue('--text-black-primary');
-        const rgbTextBlack = HSLtoRGB(hslTextBlack.substring(5, hslTextBlack.length - 1).replace(/[a-z() %]/g, "").split(","));
+        const rgbTextBlack = HSLtoRGB(hslTextBlack.substring(5, hslTextBlack.length - 1));
 
         // Calculate the contrast ratio between the two colors
         const contrastRatio = getContrastRatio(rgbColor, rgbTextBlack);
         console.log(contrastRatio)
         console.log(rgbColor)
         console.log(rgbTextBlack)
+        console.log(hslTextBlack)
 
         // Set the color title class based on the contrast ratio
         setColorTitleClass(contrastRatio < 4 ? "white normal" : "black normal");
