@@ -134,3 +134,21 @@ export function HSLtoRGB(hsl) {
     // Return the RGB array
     return [r, g, b];
 }
+
+/**
+ * 
+ * @param {String} hex - Hex color in string ex. '#ffffff' 
+ * @returns {Array} RGB - RGB array [R, G, B]
+ */
+export function HEXtoRGB(hex) {
+    // Remove the # character from the beginning of the hex value
+    hex = hex.replace("#", "");
+
+    // Parse the red, green, and blue channel values from the hex string
+    const r = parseInt(hex.substring(0, 2), 16);
+    const g = parseInt(hex.substring(2, 4), 16);
+    const b = parseInt(hex.substring(4, 6), 16);
+
+    // Return the RGB color as an array with three elements representing r, g, and b values
+    return [r, g, b];
+}
