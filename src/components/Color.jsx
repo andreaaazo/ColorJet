@@ -23,6 +23,7 @@ const Color = ({ rgbColor }) => {
 
         // Calculate the contrast ratio between the two colors
         const contrastRatio = getContrastRatio(rgbColor, rgbTextBlack);
+        console.log(contrastRatio)
 
         // Set the color title class based on the contrast ratio
         setColorTitleClass(contrastRatio < 4 ? "white normal" : "black normal");
