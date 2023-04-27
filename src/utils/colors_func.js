@@ -36,19 +36,35 @@ export function randomChangeRGBBrightness(rgb) {
  * @returns {Array} [r, g, b] - Shaded color
  *  
  */
-export function generateShades(baseColor) {
-    switch (baseColor) {
-        case 'red':
-            return randomChangeRGBBrightness([255, Math.floor(Math.random() * 255), Math.floor(Math.random() * 255)])
-        case 'green':
-            return randomChangeRGBBrightness([Math.floor(Math.random() * 255), 255, Math.floor(Math.random() * 255)])
-        case 'blue':
-            return randomChangeRGBBrightness([Math.floor(Math.random() * 255), Math.floor(Math.random() * 255), 255])
-        case 'all':
-            return generateRGB()
-        default:
-            Error("You have to select 'red', 'green' or 'blue'")
-    }
+
+function generateShades(baseColor) {
+  let hue, saturation, lightness;
+
+  switch (baseColor) {
+    case "red":
+      hue = Math.floor(Math.random() * 121) - 60; // hue tra -60 e 60 gradi
+      saturation = Math.floor(Math.random() * 101); // saturazione tra 0 e 100%
+      lightness = Math.floor(Math.random() * 101); // luminosità tra 0 e 100%
+      break;
+    case "green":
+      hue = Math.floor(Math.random() * 121) + 60; // hue tra 60 e 180 gradi
+      saturation = Math.floor(Math.random() * 101);
+      lightness = Math.floor(Math.random() * 101);
+      break;
+    case "blue":
+      hue = Math.floor(Math.random() * 121) + 180; // hue tra 180 e 300 gradi
+      saturation = Math.floor(Math.random() * 101);
+      lightness = Math.floor(Math.random() * 101);
+      break;
+    case "all":
+      return generateRGB();
+    default:
+      Error("insert a valid parameter");
+      return;
+  }
+
+  const rgb = HSLtoRGB([hue, saturation, lightness]);
+  return rgb;
 }
 
 /**
@@ -90,6 +106,7 @@ export function getRelativeLuminance(rgb) {
     });
     return 0.2126 * r + 0.7152 * g + 0.0722 * b;
 }
+
 /**
  * Transform HSL to RGB Color
  * 
