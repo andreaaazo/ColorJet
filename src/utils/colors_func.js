@@ -12,7 +12,6 @@ export function generateRGB() {
     return [R, G, B]
 }
 
-
 /**
  * Change random brightness of RGB color
  * 
@@ -27,7 +26,6 @@ export function randomChangeRGBBrightness(rgb) {
     return [Math.round(rgb[0] * randomBrightness), Math.round(rgb[1] * randomBrightness), Math.round(rgb[2] * randomBrightness)]
 }
 
-
 /**
  * Returns every shade of Red, Green or Blue
  * 
@@ -36,8 +34,7 @@ export function randomChangeRGBBrightness(rgb) {
  * @returns {Array} [r, g, b] - Shaded color
  *  
  */
-
-function generateShades(baseColor) {
+export function generateShades(baseColor) {
   let hue, saturation, lightness;
 
   switch (baseColor) {
@@ -153,7 +150,8 @@ export function HSLtoRGB(hsl) {
 }
 
 /**
- * 
+ * Transform HEX Color to RGB
+ *
  * @param {String} hex - Hex color in string ex. '#ffffff' 
  * @returns {Array} RGB - RGB array [R, G, B]
  */
