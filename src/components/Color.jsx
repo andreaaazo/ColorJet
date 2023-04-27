@@ -13,7 +13,7 @@ const Color = ({ rgbColor }) => {
     useEffect(() => {
         // Get the HSL value for text-black-primary and convert it to RGB
         const hslTextBlack = getComputedStyle(document.documentElement).getPropertyValue('--text-black-primary');
-        const rgbTextBlack = HSLtoRGB(hslTextBlack.substring(5, hslTextBlack.length - 1));
+        const rgbTextBlack = HSLtoRGB([12,13,40]);
 
         // Calculate the contrast ratio between the two colors
         const contrastRatio = getContrastRatio(rgbColor, rgbTextBlack);
