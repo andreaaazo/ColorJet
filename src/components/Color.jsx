@@ -13,9 +13,9 @@ const Color = ({ rgbColor }) => {
     useEffect(() => {
         // Get the value for text-black-primary and convert it to RGB
         const textBlack = getComputedStyle(document.documentElement).getPropertyValue('--text-black-primary');
-        const rgbTextBlack = hslTextBlack.charAt(0) == "#" ? HEXtoRGB(textBlack) : HSLtoRGB(
+        const rgbTextBlack = textBlack.charAt(0) == "#" ? HEXtoRGB(textBlack) : HSLtoRGB(
             textBlack
-            .substring(5, hslTextBlack.length - 1) // Extract the HSL values from the string
+            .substring(5, textBlack.length - 1) // Extract the HSL values from the string
             .replace(/[a-z() %]/g, "")
             .split(",")
             .map(colorValue => Number(colorValue))
