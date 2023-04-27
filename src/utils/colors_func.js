@@ -39,17 +39,19 @@ export function generateShades(baseColor) {
 
   switch (baseColor) {
     case "red":
-      hue = Math.floor(Math.random() * 121) - 60; // hue tra -60 e 60 gradi
-      saturation = Math.floor(Math.random() * 101); // saturazione tra 0 e 100%
-      lightness = Math.floor(Math.random() * 101); // luminosità tra 0 e 100%
+      const hue1 = Math.floor(Math.random() * 61); // 0-60 deg
+      const hue2 = Math.floor(Math.random() * 61) + 300; // 300-360 deg
+      hue = Math.random() < 0.5 ? hue1 : hue2;
+      saturation = Math.floor(Math.random() * 101); // saturation between 0 and 100%
+      lightness = Math.floor(Math.random() * 101); // luminosity between 0 and 100%
       break;
     case "green":
-      hue = Math.floor(Math.random() * 121) + 60; // hue tra 60 e 180 gradi
+      hue = Math.floor(Math.random() * 121) + 60; // hue between 60 and 180 deg
       saturation = Math.floor(Math.random() * 101);
       lightness = Math.floor(Math.random() * 101);
       break;
     case "blue":
-      hue = Math.floor(Math.random() * 121) + 180; // hue tra 180 e 300 gradi
+      hue = Math.floor(Math.random() * 121) + 180; // hue between 180 and 300 deg
       saturation = Math.floor(Math.random() * 101);
       lightness = Math.floor(Math.random() * 101);
       break;
